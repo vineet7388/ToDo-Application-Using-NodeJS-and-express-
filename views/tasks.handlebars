@@ -1,0 +1,28 @@
+<table>
+    <tbody>
+        {{#result}}
+            <tr>
+                <td>
+
+<form method="POST">
+    <button type="submit" value="remove" name="remove">Remove</button>
+    <input type="text" placeholder="{{taskid}}" name="taskid" value="{{taskid}}" readonly>
+    <input type="text" placeholder="{{name}}" name="name" value="{{name}}" readonly>  
+    <input type="text" placeholder="{{date}}" name="date" value="{{date}}" readonly>   
+    <input type="text" placeholder="{{task}}" name="task" value="{{task}}">
+    <button type="submit" value="update" name="update">Update</button>
+</form>
+</td>
+
+</tr>
+            {{/result}}
+        </tbody>
+</table>
+
+
+<form method="POST">
+    <input type="text" placeholder="{{result.0.name}}" name="name" value="{{result.0.name}}" readonly>  
+    <input type="text" placeholder="{{result.0.date}}" name="date" value="{{result.0.date}}" readonly>  
+    <input type="text" placeholder="" name="task" value="{{task}}">
+    <button type="submit" value="add" name="add">ADD</button>
+</form>
